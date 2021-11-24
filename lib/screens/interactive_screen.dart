@@ -9,7 +9,7 @@ class InteractiveScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         // Define as false to hide the back button
         title: Text('StarToday'),
       ),
@@ -105,7 +105,7 @@ class InteractiveScreen extends StatelessWidget {
                     Expanded(
                         child: StarCard(
                           imageNumber: '9',
-                          resultScreen: ResultScreen('Palpatine', '9', 'Destruído por fora, mas feliz por dentro.'),
+                          resultScreen: ResultScreen('Palpatine', '9', 'Destruído por fora, mas feliz por dentro'),
                         )
                     ),
                   ],

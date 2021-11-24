@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:desafio_s1/components/button.dart';
 
-import 'interactive_screen.dart';
 
 class ResultScreen extends StatelessWidget {
 
@@ -44,9 +43,7 @@ class ResultScreen extends StatelessWidget {
           ),
           PrincipalButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return InteractiveScreen();
-                }));
+                Navigator.pop(context);
               },
               buttonTextHeight: 20.0,
               buttonText: 'Tentar de Novo')
