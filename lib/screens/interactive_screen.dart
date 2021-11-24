@@ -1,6 +1,7 @@
 import 'package:desafio_s1/components/star_card.dart';
 import 'package:desafio_s1/screens/result_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:desafio_s1/components/constants.dart';
 
 class InteractiveScreen extends StatelessWidget {
   const InteractiveScreen({Key? key}) : super(key: key);
@@ -9,9 +10,9 @@ class InteractiveScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         // Define as false to hide the back button
-        title: Text('StarToday'),
+        automaticallyImplyLeading: true,
+        title: Text(kInteractiveScreenTitle),
       ),
       body: Column(
         children: [
@@ -19,7 +20,7 @@ class InteractiveScreen extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
             child: Center(
               child: Text(
-                'De 1 até 9, como você se sente hoje?',
+                kInteractiveScreenSubTitle,
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -36,20 +37,20 @@ class InteractiveScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: StarCard(
-                        imageNumber: '1',
-                        resultScreen: ResultScreen('Anakin', '1', 'Você está pegando fogo hoje!'),
+                        imageNumber: kResults[0].resultNumber,
+                        resultScreen: ResultScreen(kResults[0]),
                       ),
                     ),
                     Expanded(
                       child: StarCard(
-                        imageNumber: '2',
-                        resultScreen: ResultScreen('Han Solo', '2', 'Malandro'),
+                        imageNumber: kResults[1].resultNumber,
+                        resultScreen: ResultScreen(kResults[1]),
                       ),
                     ),
                     Expanded(
                       child: StarCard(
-                        imageNumber: '3',
-                        resultScreen: ResultScreen('Baby Yoda', '3', 'Fofo'),
+                        imageNumber: kResults[2].resultNumber,
+                        resultScreen: ResultScreen(kResults[2]),
                       )
                     ),
                   ],
@@ -64,20 +65,20 @@ class InteractiveScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: StarCard(
-                        imageNumber: '4',
-                        resultScreen: ResultScreen('Luke', '4', 'Carregando o time nas costas'),
+                        imageNumber: kResults[3].resultNumber,
+                        resultScreen: ResultScreen(kResults[3]),
                       ),
                     ),
                     Expanded(
                       child: StarCard(
-                        imageNumber: '5',
-                        resultScreen: ResultScreen('Princesa Leia', '5', 'Bela e pronta para atirar no primeiro que discordar'),
+                        imageNumber: kResults[4].resultNumber,
+                        resultScreen: ResultScreen(kResults[4]),
                       ),
                     ),
                     Expanded(
                         child: StarCard(
-                          imageNumber: '6',
-                          resultScreen: ResultScreen('Stormtrooper', '6', 'Não sabendo que era impossível errar, foi lá e errou'),
+                          imageNumber: kResults[5].resultNumber,
+                          resultScreen: ResultScreen(kResults[5]),
                         )
                     ),
                   ],
@@ -92,20 +93,20 @@ class InteractiveScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: StarCard(
-                        imageNumber: '7',
-                        resultScreen: ResultScreen('R2D2 e C3PO', '7', 'Uma máquina de produtividade!'),
+                        imageNumber: kResults[6].resultNumber,
+                        resultScreen: ResultScreen(kResults[6]),
                       ),
                     ),
                     Expanded(
                       child: StarCard(
-                        imageNumber: '8',
-                        resultScreen: ResultScreen('Darth Vader', '8', 'A ponto de estrangular alguém'),
+                        imageNumber: kResults[7].resultNumber,
+                        resultScreen: ResultScreen(kResults[7]),
                       ),
                     ),
                     Expanded(
                         child: StarCard(
-                          imageNumber: '9',
-                          resultScreen: ResultScreen('Palpatine', '9', 'Destruído por fora, mas feliz por dentro'),
+                          imageNumber: kResults[8].resultNumber,
+                          resultScreen: ResultScreen(kResults[8]),
                         )
                     ),
                   ],

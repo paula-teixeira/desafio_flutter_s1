@@ -1,10 +1,7 @@
 import 'package:desafio_s1/components/button.dart';
+import 'package:desafio_s1/components/constants.dart';
 import 'package:desafio_s1/screens/interactive_screen.dart';
 import 'package:flutter/material.dart';
-
-const _title = 'Descobrir como você starhoje nunca foi tão fácil!';
-const _subtitle =
-    'Saber como você está hoje é fundamental para organizar o trabalho com o time e garantir o aprendizado em equipe';
 
 class InitialScreen extends StatelessWidget {
   @override
@@ -24,7 +21,7 @@ class InitialScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                _title,
+                kMainScreentitle,
                 style: TextStyle(
                   fontFamily: 'StarJedi',
                   fontSize: 28.0,
@@ -34,7 +31,7 @@ class InitialScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 30.0),
               child: Text(
-                _subtitle,
+                kMainScreensubtitle,
                 style: TextStyle(
                   fontSize: 18.0,
                 ),

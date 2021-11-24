@@ -1,21 +1,18 @@
+import 'package:desafio_s1/components/results.dart';
 import 'package:flutter/material.dart';
 import 'package:desafio_s1/components/button.dart';
 
-
 class ResultScreen extends StatelessWidget {
+  final Results results;
 
-  final String resultImageNumber;
-  final String resultText;
-  final String resultTitle;
-
-  ResultScreen(this.resultTitle, this.resultImageNumber, this.resultText);
+  ResultScreen(this.results);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(resultTitle),
-          automaticallyImplyLeading: false,
+        title: Text(results.resultName),
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -24,11 +21,11 @@ class ResultScreen extends StatelessWidget {
           Stack(
             alignment: Alignment.bottomCenter,
             children: [
-              Image.asset('images/$resultImageNumber.jpg'),
+              Image.asset('images/${results.resultNumber}.jpg'),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
-                  resultText,
+                  results.resultText,
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     fontSize: 20.0,

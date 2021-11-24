@@ -16,10 +16,15 @@ class MemeWars extends StatelessWidget {
         textTheme: TextTheme(
           bodyText2: TextStyle(
             color: Colors.yellow,
-          )
-        )
+          ),
+        ),
       ),
       home: InitialScreen(),
     );
   }
 }
+// primaryColor: Colors.yellow,
+// scaffoldBackgroundColor: Colors.black,
+// textTheme: TextTheme(
+// bodyText2: TextStyle(
+// color: Colors.yellow,
